@@ -38,15 +38,16 @@ const Card = ({ item }: { item: BrandData }) => {
     return (
         <div
             ref={cardRef}
-            className={`card tier-${item.tier}`}
+            className="card"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
             <div className="card-header">
                 <span className="day-label">DAY // {dayStr}</span>
-                <span className="tier-badge">T{item.tier}</span>
             </div>
-            <h3 className="brand-name">{item.brand}</h3>
+            <div className="card-content">
+                <h3 className="brand-name">{item.brand}</h3>
+            </div>
         </div>
     );
 };
