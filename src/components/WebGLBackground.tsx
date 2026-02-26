@@ -43,7 +43,7 @@ export default function WebGLBackground() {
             posArray[i + 2] = (Math.random() - 0.5) * 2000;
 
             const rand = Math.random();
-            let mixedColor = rand < 0.1 ? color1 : (rand < 0.3 ? color3 : color2);
+            const mixedColor = rand < 0.1 ? color1 : (rand < 0.3 ? color3 : color2);
 
             colorArray[i] = mixedColor.r;
             colorArray[i + 1] = mixedColor.g;
@@ -95,8 +95,6 @@ export default function WebGLBackground() {
         // Parallax Mouse Interaction for Background
         let mouseX = 0;
         let mouseY = 0;
-        let targetX = 0;
-        let targetY = 0;
 
         const handleMouseMove = (e: MouseEvent) => {
             mouseX = (e.clientX - window.innerWidth / 2) * 0.5;
@@ -125,10 +123,6 @@ export default function WebGLBackground() {
 
         const animate = () => {
             animationFrameId = requestAnimationFrame(animate);
-            const delta = clock.getDelta();
-
-            targetX = mouseX * 0.001;
-            targetY = mouseY * 0.001;
 
             // Subtle rotation
             particlesMesh.rotation.y -= 0.0002;
