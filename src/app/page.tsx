@@ -35,8 +35,8 @@ export default function Home() {
           <div>
             <span className="subtitle">Colton Batts</span>
             <h1>
-              <span className="un-gothic">UN</span>
-              <span className="briefed-pixel">BRIEFED</span>
+              <span className="un-gothic">Un</span>
+              <span className="briefed-pixel">briefed</span>
             </h1>
           </div>
           <div className="stats">
