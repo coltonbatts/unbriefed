@@ -78,6 +78,8 @@ body::-webkit-scrollbar {
   justify-content: center;
   border: 1px solid var(--border-color);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  perspective: 1500px;
+  /* Add depth for the child 3D elements */
 }
 
 .hero-video {
@@ -105,6 +107,8 @@ body::-webkit-scrollbar {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   animation: glass-glow 6s infinite alternate ease-in-out;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
 @keyframes glass-glow {
@@ -125,6 +129,9 @@ body::-webkit-scrollbar {
   justify-content: center;
   margin: 0;
   text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  transform: translateZ(50px);
+  pointer-events: none;
+  /* Let the banner container handle hover smoothly */
 }
 
 .un-gothic {
