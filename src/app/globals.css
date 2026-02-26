@@ -1,6 +1,7 @@
 :root {
   --bg-color: #050505;
   --accent-red: #ff2a55;
+  --accent-blue: #00d2ff;
   --text-primary: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.5);
   --border-color: rgba(255, 255, 255, 0.15);
@@ -74,10 +75,25 @@ body::-webkit-scrollbar {
   background: rgba(10, 10, 12, 0.25);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  padding: 40px 80px;
-  border-radius: 16px;
+  padding: 40px 100px;
+  /* Wider padding for better pill proportion */
+  border-radius: 60px;
+  /* More rounded corners */
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  animation: glass-glow 6s infinite alternate ease-in-out;
+}
+
+@keyframes glass-glow {
+  from {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 20px rgba(0, 210, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  to {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 50px rgba(0, 210, 255, 0.3);
+    border-color: rgba(0, 210, 255, 0.4);
+  }
 }
 
 .hero-title {
@@ -95,7 +111,10 @@ body::-webkit-scrollbar {
   margin-right: -0.02em;
   color: var(--text-primary);
   line-height: 0.8;
-  margin-bottom: 0.15em;
+  margin-bottom: 0em;
+  /* Removing this helps visually center it vertically */
+  transform: translateY(-0.05em);
+  /* Nudges the gothic text slightly up to optically center */
   animation: pulse-glow 4s ease-in-out infinite alternate;
 }
 
@@ -105,7 +124,7 @@ body::-webkit-scrollbar {
   background: linear-gradient(110deg,
       #fff 0%,
       #fff 40%,
-      var(--accent-red) 50%,
+      var(--accent-blue) 50%,
       #fff 60%,
       #fff 100%);
   background-size: 200% auto;
@@ -123,11 +142,11 @@ body::-webkit-scrollbar {
 
 @keyframes pulse-glow {
   from {
-    text-shadow: 0 0 10px rgba(255, 42, 85, 0.2);
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
   }
 
   to {
-    text-shadow: 0 0 30px rgba(255, 42, 85, 0.8), 0 0 60px rgba(255, 42, 85, 0.4);
+    text-shadow: 0 0 30px rgba(0, 210, 255, 0.8), 0 0 60px rgba(0, 210, 255, 0.4);
   }
 }
 
