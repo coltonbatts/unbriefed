@@ -43,17 +43,6 @@ export default function Home() {
           </div>
         </div>
 
-        <header>
-          <div>
-            <span className="subtitle">Colton Batts</span>
-          </div>
-          <div className="stats">
-            DURATION: 90 DAYS<br />
-            STATUS: ACTIVE<br />
-            COORDINATES: SECURED
-          </div>
-        </header>
-
         <BoardGrid />
       </div>
     </main>

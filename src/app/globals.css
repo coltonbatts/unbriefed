@@ -75,8 +75,8 @@ body::-webkit-scrollbar {
   background: rgba(10, 10, 12, 0.25);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  padding: 40px 100px;
-  /* Wider padding for better pill proportion */
+  padding: 46px 100px 34px;
+  /* Wider padding for better pill proportion and downward optical centering */
   border-radius: 60px;
   /* More rounded corners */
   border: 1px solid rgba(255, 255, 255, 0.2);
