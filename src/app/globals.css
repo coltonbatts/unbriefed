@@ -10,11 +10,10 @@
 body {
   margin: 0;
   background-color: var(--bg-color);
-  font-family: 'Inter', sans-serif;
   color: var(--text-primary);
   overflow-x: hidden;
   /* Hide scrollbar for a cleaner brutalist look, but keep functionality */
-  scrollbar-width: none; 
+  scrollbar-width: none;
 }
 
 body::-webkit-scrollbar {
@@ -52,16 +51,14 @@ header {
 }
 
 h1 {
-  font-family: 'Cinzel', serif;
   font-size: clamp(3rem, 6vw, 5rem);
   margin: 0;
   letter-spacing: 0.1em;
   line-height: 1;
-  text-shadow: 0 0 20px rgba(0,0,0,1);
+  text-shadow: 0 0 20px rgba(0, 0, 0, 1);
 }
 
 .subtitle {
-  font-family: 'Space Mono', monospace;
   font-size: 14px;
   color: var(--accent-red);
   letter-spacing: 0.2em;
@@ -71,7 +68,6 @@ h1 {
 }
 
 .stats {
-  font-family: 'Space Mono', monospace;
   font-size: 14px;
   color: var(--text-muted);
   text-align: right;
@@ -83,7 +79,8 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  perspective: 1000px; /* For 3D hover effects */
+  perspective: 1000px;
+  /* For 3D hover effects */
 }
 
 /* Card Styling (Brutalist + Glass) */
@@ -110,23 +107,22 @@ h1 {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 20px;
-  pointer-events: none; /* Let the card handle hovers */
+  pointer-events: none;
+  /* Let the card handle hovers */
 }
 
 .day-label {
-  font-family: 'Space Mono', monospace;
   font-size: 12px;
   color: var(--text-muted);
   letter-spacing: 2px;
 }
 
 .tier-badge {
-  font-family: 'Space Mono', monospace;
   font-size: 11px;
   padding: 4px 8px;
   border: 1px solid var(--border-color);
   color: var(--text-primary);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   font-weight: 700;
 }
 
@@ -139,12 +135,12 @@ h1 {
 
 .card.tier-2 .tier-badge {
   color: var(--bg-color);
-  background: #a39171; /* Gold/Bronze */
+  background: #a39171;
+  /* Gold/Bronze */
   border-color: #a39171;
 }
 
 .brand-name {
-  font-family: 'Inter', sans-serif;
   font-weight: 900;
   font-size: 24px;
   text-transform: uppercase;
@@ -159,7 +155,7 @@ h1 {
 .card:hover {
   background: rgba(255, 255, 255, 0.03);
   border-color: var(--text-primary);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5), inset 0 0 0 1px var(--text-primary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 0 0 1px var(--text-primary);
 }
 
 .card:hover .brand-name {
@@ -168,7 +164,7 @@ h1 {
 
 .card.tier-3:hover {
   border-color: var(--accent-red);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.8), inset 0 0 0 2px var(--accent-red);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), inset 0 0 0 2px var(--accent-red);
 }
 
 /* Deco lines on hover */
@@ -183,7 +179,14 @@ h1 {
   transition: width 0.3s ease;
 }
 
-.card.tier-3::before { background: var(--accent-red); }
-.card.tier-2::before { background: #a39171; }
+.card.tier-3::before {
+  background: var(--accent-red);
+}
 
-.card:hover::before { width: 100%; }
+.card.tier-2::before {
+  background: #a39171;
+}
+
+.card:hover::before {
+  width: 100%;
+}

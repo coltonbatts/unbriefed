@@ -33,7 +33,7 @@ export default function Home() {
       <div id="ui-layer">
         <header>
           <div>
-            <span className="subtitle">Spec Ad Series</span>
+            <span className="subtitle">Colton Batts</span>
             <h1>UNBRIEFED</h1>
           </div>
           <div className="stats">
