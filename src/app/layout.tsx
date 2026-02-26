@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { GeistPixelLine } from 'geist/font/pixel';
 import { UnifrakturMaguntia } from 'next/font/google';
+import ErrorBoundary from '@/components/ErrorBoundary';
 import './globals.css';
 
 const unifraktur = UnifrakturMaguntia({
@@ -21,7 +22,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistPixelLine.className} ${unifraktur.variable}`}>
-      <body>{children}</body>
+      <body>
+        <ErrorBoundary>
+          {children}
+        </ErrorBoundary>
+      </body>
     </html>
   );
 }

@@ -119,7 +119,6 @@ export default function WebGLBackground() {
 
         // Animation Loop
         let animationFrameId: number;
-        const clock = new THREE.Clock();
 
         const animate = () => {
             animationFrameId = requestAnimationFrame(animate);
