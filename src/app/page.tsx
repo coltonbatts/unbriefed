@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import dynamic from 'next/dynamic';
 import BoardGrid from '@/components/BoardGrid';
 
@@ -8,13 +8,7 @@ import BoardGrid from '@/components/BoardGrid';
 const WebGLBackground = dynamic(() => import('@/components/WebGLBackground'), { ssr: false });
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Remove loading screen after mount
-    const timer = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
 
   // --- Hero Interactive Logic ---
   const glassRef = useRef<HTMLDivElement>(null);
@@ -85,15 +79,7 @@ export default function Home() {
 
   return (
     <main>
-      <div
-        id="loading"
-        style={{
-          opacity: loading ? 1 : 0,
-          pointerEvents: loading ? 'all' : 'none'
-        }}
-      >
-        SYSTEM_INIT // LOADING...
-      </div>
+
 
       <WebGLBackground />
 
