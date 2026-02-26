@@ -36,7 +36,10 @@ export default function Home() {
             <source src="/banner-video.mp4" type="video/mp4" />
           </video>
           <div className="hero-glass">
-            <h1 className="hero-title briefed-pixel">UNBRIEFED</h1>
+            <h1 className="hero-title">
+              <span className="un-gothic">Un</span>
+              <span className="briefed-pixel">briefed</span>
+            </h1>
           </div>
         </div>
 
