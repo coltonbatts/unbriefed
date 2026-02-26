@@ -56,6 +56,21 @@ h1 {
   letter-spacing: 0.1em;
   line-height: 1;
   text-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  display: flex;
+  align-items: baseline;
+}
+
+.un-gothic {
+  font-family: var(--font-unifraktur), serif;
+  font-weight: 400;
+  font-size: 1.25em;
+  /* Gothic fonts often appear slightly smaller visually */
+  margin-right: 0.05em;
+  color: var(--text-primary);
+}
+
+.briefed-pixel {
+  /* Inherits the GeistPixelLine font from body */
 }
 
 .subtitle {

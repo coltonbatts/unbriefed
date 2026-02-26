@@ -34,7 +34,10 @@ export default function Home() {
         <header>
           <div>
             <span className="subtitle">Colton Batts</span>
-            <h1>UNBRIEFED</h1>
+            <h1>
+              <span className="un-gothic">UN</span>
+              <span className="briefed-pixel">BRIEFED</span>
+            </h1>
           </div>
           <div className="stats">
             DURATION: 90 DAYS<br />
