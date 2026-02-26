@@ -41,9 +41,58 @@ body::-webkit-scrollbar {
 }
 
 /* Header / Title Area */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  min-height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.85;
+  filter: saturate(1.2) contrast(1.1);
+}
+
+.hero-glass {
+  position: relative;
+  z-index: 1;
+  background: rgba(10, 10, 12, 0.25);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  padding: 40px 80px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  margin: 0;
+  letter-spacing: 0.15em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+
 header {
-  margin-bottom: 80px;
-  border-bottom: 2px solid var(--text-primary);
+  margin-bottom: 60px;
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
@@ -62,23 +111,6 @@ h1 {
   /* Center alignment looks better for mixed fonts */
 }
 
-.un-gothic {
-  font-family: var(--font-unifraktur), serif;
-  font-weight: 400;
-  font-size: 1.6em;
-  /* Make the 'Un' drop-cap larger and more dramatic */
-  margin-right: -0.02em;
-  /* Pull them snugly built together */
-  color: var(--text-primary);
-  line-height: 0.8;
-  margin-bottom: 0.15em;
-  /* Optical vertical alignment */
-}
-
-.briefed-pixel {
-  font-size: 0.9em;
-  letter-spacing: 0.1em;
-}
 
 .subtitle {
   font-size: 14px;

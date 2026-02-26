@@ -31,13 +31,18 @@ export default function Home() {
       <WebGLBackground />
 
       <div id="ui-layer">
+        <div className="hero-banner">
+          <video autoPlay loop muted playsInline className="hero-video">
+            <source src="/banner-video.mp4" type="video/mp4" />
+          </video>
+          <div className="hero-glass">
+            <h1 className="hero-title briefed-pixel">UNBRIEFED</h1>
+          </div>
+        </div>
+
         <header>
           <div>
             <span className="subtitle">Colton Batts</span>
-            <h1>
-              <span className="un-gothic">Un</span>
-              <span className="briefed-pixel">briefed</span>
-            </h1>
           </div>
           <div className="stats">
             DURATION: 90 DAYS<br />
