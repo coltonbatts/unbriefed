@@ -296,6 +296,10 @@ h1 {
   text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
+.card:hover .card-action-text {
+  color: var(--text-primary) !important;
+}
+
 /* Deco lines on hover */
 .card::before {
   content: '';
@@ -310,4 +314,105 @@ h1 {
 
 .card:hover::before {
   width: 100%;
+}
+
+/* Internal Board Styles */
+.back-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  color: var(--text-primary);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.ideation-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: var(--accent-red);
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.glass-input {
+  background: rgba(10, 10, 12, 0.4);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-primary);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 20px;
+  outline: none;
+  transition: all 0.3s ease;
+  resize: vertical;
+  width: 100%;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.glass-input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(10, 10, 12, 0.6);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.glass-input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(10, 10, 12, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-primary);
+  padding: 12px 24px;
+  border-radius: 40px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.toast-icon {
+  color: #00ff88;
+  font-weight: bold;
 }
